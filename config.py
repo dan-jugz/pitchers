@@ -7,7 +7,9 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://daniel:daniel@localhost/pitch'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
-
+    SIMPLEMDE_JS_IIFE = True
+    SIMPLEMDE_USE_CDN = True
+    
     @staticmethod
     def init_app(app):
         pass
