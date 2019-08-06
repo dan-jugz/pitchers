@@ -27,7 +27,11 @@
 
     {% block content %}
       
-    {% endblock %}
+    {% block styles %}
+    {{ super() }}
+    {{ simplemde.css }}
+    {{ simplemde.js }}
+    {% endblock %} 
 </body>
 
 </html>
