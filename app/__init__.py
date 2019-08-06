@@ -5,10 +5,14 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 
+from flask_uploads import UploadSet, configure_uploads, IMAGES
+
+
 bootstrap = Bootstrap()
-db = SQLAlchemy
+db = SQLAlchemy()
+photos = UploadSet('photos', IMAGES)
 login_manager = LoginManager()
-#login_manager.session.protection = 'strong'
+login_manager.session.protection = 'strong'
 login_manager.login_view = 'auth.login'
 
 
