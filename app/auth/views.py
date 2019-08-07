@@ -5,7 +5,6 @@ from .forms import RegistrationForm,LoginForm
 from  .. import db
 from flask_login import login_user, logout_user, login_required
 
-
 @auth.route('/login')
 def login():
     login_form = LoginForm()
@@ -21,11 +20,14 @@ def login():
 
 @auth.route('/register', methods=["GET","POST"])
 def register():
-@@ -19,4 +27,3 @@ def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(email=form.email.data, username=form.username.data,password=form.password.data)
+        db.session.add(user)
+        db.session.commit()
         return redirect(url_for('auth.login'))
     title = 'Pitch | New Account'
     return render_template('/auth/register.html', registration_form=form)
-
 
 @auth.route('/logout')
 @login_required
