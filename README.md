@@ -22,7 +22,7 @@ As a user I would like:
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
 | Register to be a user | Your email : john@doe.com  Username : jonDoo  Password : doe | New user is registered |
-| User Log in | Your email : john@doe.com  Password : doe | Logged in |
+| User Log in | Your email : daniel@mail.com  Password : dan | Logged in |
 | Create a Pitch | Click New Pitch |Authenticated User is redirected to a form page to create a pitch |
 | View a pitch | Click on a pitch's title | Redirected to a page that has the the pitch|
 | Comment on a pitch | Click Comment | Authenticated user is redirected to a form to comment about that pitch|

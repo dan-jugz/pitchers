@@ -25,4 +25,4 @@ def make_shell_context():
 
 
 if __name__ == "__main__":
-    manager.run()
+    manager.run(debug = True)
